@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin-top: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    
+
+    
+  
+}
+
+nav{
+    background: aqua;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: red;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 50px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+
+
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    
+    
+}
+
+a.active, a:hover {
+    background: mediumaquamarine;
+    transition: .5s;
+    border-radius: 5px;
+
+}
+
+.checkbut{
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none; 
+   
+
+}
+
+#check{
+    display: none;
+} 
+
+#cancel{
+    display: none;
+}
+
+
+
+@media (max-width: 952px){
+     label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    } 
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+   
+   
+    .checkbut{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: greenyellow;
+        text-align: center;
+        top: 80px;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 1px; 
+    }
+    nav ul li a{
+        font-size: 20px;
+
+    }
+    a.active,a.hover{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+}
+}
+
+section{
+    background: url(pic2.jpg) no-repeat ;
+    background-size: cover;
+    height: calc(100vh - 80px);
+
+}
